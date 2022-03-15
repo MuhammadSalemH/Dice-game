@@ -1,0 +1,165 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(
+    to left,
+    rgba(246, 41, 12, 1) 0%,
+    rgba(248, 80, 50, 1) 60%,
+    rgba(240, 47, 23, 1) 91%,
+    rgba(231, 56, 39, 1) 100%
+  );
+}
+
+main {
+  display: flex;
+  justify-content: space-between;
+  width: 80vw;
+  height: 90vh;
+  position: relative;
+}
+
+section {
+  width: 50%;
+  height: 100%;
+  text-align: center;
+  padding: 3rem;
+  background: #fff2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  /* opacity: 0.5; */
+  transition: all ease-in 0.5s;
+  filter: blur(2px);
+  position: relative;
+}
+section.active {
+  background-color: #fff9;
+  opacity: 1;
+  filter: none;
+}
+#player-1 {
+  border-top-left-radius: 1.5rem;
+  border-bottom-left-radius: 1.5rem;
+}
+#player-2 {
+  border-top-right-radius: 1.5rem;
+  border-bottom-right-radius: 1.5rem;
+}
+img {
+  height: 100px;
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  top: 14rem;
+  /* top: 50%; */
+  transform: translate(-50%, -50%);
+  filter: drop-shadow(5px 5px 10px #0003);
+  display: none;
+}
+button {
+  position: absolute;
+  border: none;
+  border-radius: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: 900;
+  font-size: 1rem;
+  text-transform: inherit;
+  padding: 0.75em 0.25rem;
+  transition: 0.2s;
+}
+button:focus {
+  border: 1px solid rgba(34, 34, 34, 0.274);
+}
+button::first-letter {
+  margin-right: 0.2rem;
+  font-size: 1.1rem;
+  transform: rotate(1turn);
+}
+
+button:hover {
+  background-color: #fff;
+  box-shadow: 1px 1px 5px 1px #0003;
+}
+
+button:first-of-type {
+  top: 1.5rem;
+  width: 12rem;
+}
+
+.roll {
+  bottom: 8rem;
+  width: 10rem;
+}
+
+button:last-of-type {
+  bottom: 4rem;
+  width: 8rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+  font-weight: 400;
+}
+
+.total-score {
+  position: relative;
+  top: -2rem;
+  font-size: 2.5rem;
+}
+
+.current {
+  background-color: rgba(246, 41, 12, 1);
+  width: 12rem;
+  height: 8rem;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 20px;
+  border-radius: 1rem;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.current h3 {
+  font-weight: 400;
+}
+
+.current p {
+  position: relative;
+  top: 10px;
+  font-size: 1.5rem;
+}
+
+.winner {
+  background-color: #000;
+  color: rgba(246, 41, 12, 1);
+  opacity: 1;
+  filter: none;
+  font-weight: bold;
+}
+.winner-msg-1,
+.winner-msg-2 {
+  display: none;
+  font-weight: 800;
+  font-size: 2rem;
+  color: rgba(246, 41, 12, 1);
+}
