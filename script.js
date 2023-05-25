@@ -41,7 +41,7 @@ btnRoll.addEventListener("click", function () {
     // 1. generating a dice number
     const diceRoll = Math.floor(Math.random() * 6 + 1);
     // 2. showing the dice
-    dice.src = `dice-${diceRoll}.png`;
+    dice.src = `./assets/dice-${diceRoll}.png`;
     dice.style.display = "block";
     // 3. check the dice number
     if (diceRoll !== 1) {
