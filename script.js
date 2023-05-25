@@ -36,8 +36,6 @@ const reset = function () {
 
 let currentScore, activePlayer, score, playing;
 
-reset();
-
 btnRoll.addEventListener("click", function () {
   if (playing) {
     // 1. generating a dice number
